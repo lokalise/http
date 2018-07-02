@@ -1,0 +1,43 @@
+{
+    "name": "logics/http",
+    "keywords": ["http", "client", "form", "scraping"],
+    "description": "HTTP client and form scraper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Bashkirtsev",
+            "email": "vladimir@bashkirtsev.com",
+            "homepage": "http://www.bashkirtsev.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "Logics\\Foundation\\HTTP\\": ["src"]
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "ext-bz2": "*",
+        "ext-dom": "*",
+        "ext-gettext": "*",
+        "ext-curl": "*",
+        "logics/baselib": "^0.1||dev-trunk",
+        "logics/sql": "^0.1||dev-trunk",
+        "logics/xml": "^0.1||dev-trunk"
+    },
+    "require-dev": {
+        "ext-apfd": "*",
+        "pdepend/pdepend": "^2.2",
+        "phpmd/phpmd": "^2.4",
+        "phploc/phploc": "^2.1",
+        "sebastian/phpcpd": "^2.0",
+        "phpdocumentor/phpdocumentor": "^2.9",
+        "mamuz/php-dependency-analysis": "^0.6",
+        "phpunit/phpunit": "^5.7",
+        "logics/phpunit-extensions": "^0.2||dev-trunk",
+        "logics/codesniffer": "^0.1||dev-trunk",
+        "logics/extcheck": "^0.1||dev-trunk"
+    },
+    "prefer-stable": true
+}

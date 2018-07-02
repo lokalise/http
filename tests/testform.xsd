@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="hiddentype">
+  <xs:sequence>
+    <xs:element name="hiddenfield" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="radiotype">
+  <xs:sequence>
+    <xs:element name="sex" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectedtype">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="selected" type="xs:string"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="selecttype">
+  <xs:sequence>
+    <xs:element name="make" type="selectedtype" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="submittype">
+  <xs:sequence>
+    <xs:element name="NONAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="texttype">
+  <xs:sequence>
+    <xs:element name="anotherfield" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="extrafield" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="field" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="textareatype">
+  <xs:sequence>
+    <xs:element name="testtext" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="form">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="hidden" type="hiddentype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="radio" type="radiotype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="select" type="selecttype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="submit" type="submittype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="text" type="texttype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="textarea" type="textareatype" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
